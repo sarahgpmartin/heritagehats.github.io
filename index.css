@@ -21,39 +21,43 @@ header {
 
 .hero-image {
   background-image: 
-  linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0)),
-  url("images/BrandonTaylor_Picture1.jpg");
+    linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0)),
+    url("images/BrandonTaylor_Picture1.jpg");
+
   background-size: cover;
   background-position: center;
 
   width: 100%;
-  height: 500px;
+  min-height: 500px; /* changed from height → better responsiveness */
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
+/* TEXT BOX */
 .hero-text {
   padding: 50px;
+  max-width: 600px;
 }
 
+/* TITLE */
 .hero-text h1 {
-  font-family: "freehouse", Georgia , serif;
+  font-family: "freehouse", Georgia, serif;
   font-size: 25px;
   font-weight: bold;
-
   color: #DBD3CD;
   margin: 0px;
+  line-height: 1.2;
 }
 
+/* SUBTEXT */
 .hero-text p {
   font-family: "Georgia", serif;
-  font-size: 25px;
-
+  font-size: 20px;
   color: #DBD3CD;
-  opacity: 50%;
-  margin: 0px;
+  opacity: 0.8;
+  margin: 10px 0 0 0;
 }
 
 /* ----- ----- ----- ----- ----- DESKTOP NAVIGATION SECTION ----- ----- ----- ----- ----- */
@@ -118,9 +122,11 @@ nav img {
   cursor: pointer;
 }
 
-/* ----- ----- ----- ----- ----- MOBILE NAVIGATION ----- ----- ----- ----- ----- */
+/* ----- ----- ----- ----- ----- MOBILE ----- ----- ----- ----- ----- */
 
 @media (max-width: 600px) {
+
+/* NAVIGATION */
 
   nav {
     flex-direction: column;
@@ -144,6 +150,50 @@ nav img {
     align-items: center;
     margin-top: 15px;
   }
+
+/* HERO IMAGE */
+
+  .hero-image {
+    min-height: 350px;
+  }
+
+  .hero-text {
+    padding: 25px;
+  }
+
+  .hero-text h1 {
+    font-size: 18px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  /* ABOUT SECTION */
+
+  #about {
+    padding: 25px;
+    text-align: left;
+  }
+
+  #about p {
+    width: 100%;
+  }
+
+  #about h1 {
+    text-align: left;
+  }
+
+  .learn-more {
+    font-size: 15px;
+    gap: 5px;
+  }
+
+  .line1,
+  .line2 {
+    width: 50%;
+  }
+
 }
 
 /* ----- ----- ----- ----- -----ABOUT SECTION ----- ----- ----- ----- ----- */
