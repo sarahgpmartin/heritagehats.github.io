@@ -195,12 +195,12 @@ nav img {
 
 /* FOOTER SECTION */
 
-footer .footer-info {
-  display: flex;
-  gap: 50px;
-  padding: 25px 0px;
-  flex-wrap: wrap;
-}
+  footer .footer-info {
+    display: flex;
+    gap: 50px;
+    padding: 25px 0px;
+    flex-wrap: wrap;
+  }
 
 }
 
