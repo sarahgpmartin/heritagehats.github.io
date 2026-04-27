@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -7,6 +8,7 @@ body {
   background-color: #F2F2F2;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   }
 
 /* ----- ----- ----- ----- ----- HEADER SECTION ----- ----- ----- ----- ----- */
@@ -28,7 +30,7 @@ header {
   background-position: center;
 
   width: 100%;
-  min-height: 500px; /* changed from height → better responsiveness */
+  min-height: 500px;
 
   display: flex;
   flex-direction: column;
@@ -129,9 +131,10 @@ nav img {
 /* NAVIGATION */
 
   nav {
-    flex-direction: column;
-    align-items: right;
-    padding: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
   }
 
   .nav-left {
@@ -145,10 +148,6 @@ nav img {
 
   nav ul {
     display: none;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    margin-top: 15px;
   }
 
 /* HERO IMAGE */
@@ -169,7 +168,7 @@ nav img {
     font-size: 16px;
   }
 
-  /* ABOUT SECTION */
+/* ABOUT SECTION */
 
   #about {
     padding: 25px;
@@ -193,6 +192,15 @@ nav img {
   .line2 {
     width: 50%;
   }
+
+/* FOOTER SECTION */
+
+footer .footer-info {
+  display: flex;
+  gap: 50px;
+  padding: 25px 0px;
+  flex-wrap: wrap;
+}
 
 }
 
@@ -438,11 +446,39 @@ nav img {
   text-align: center;
 }
 
+#video a {
+  font-family: "Georgia", serif;
+  font-size: 15px;
+  text-decoration: none;
+  color: #261E1A;
+  width: 50%;
+  margin-top: 5px;
+  margin-bottom: 25px
+}
+
 #video .video-grid {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 100px;
+}
+
+.video1 {
+  background-image:
+  linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5)),
+  url("images/BrandonTaylor_Picture5.jpg");
+}
+
+.video2 {
+  background-image:
+  linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5)),
+  url("images/BrandonTaylor_Picture6.jpg");
+}
+
+.video3 {
+  background-image:
+  linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5)),
+  url("images/BrandonTaylor_Picture7.jpg");
 }
 
 /* ----- ----- ----- ----- ----- SPACERS ----- ----- ----- ----- ----- */
@@ -482,10 +518,10 @@ footer p {
     }
 
 footer .footer-info {
-  columns: 2;
   display: flex;
-  column-gap: 25px;
+  gap: 50px;
   padding: 25px 0px;
+  flex-wrap: wrap;
 }
 
 footer .copyright {
