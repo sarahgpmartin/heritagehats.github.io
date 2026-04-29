@@ -94,14 +94,21 @@ nav ul {
   padding-left: 0px;
 }
 
+/* ----- NAV A INTERACTION ----- */
+
 nav a {
   text-decoration: none;
   color: #DBD3CD;
   font-family: "Georgia", serif;
   letter-spacing: 5px;
   font-size: 15px;
-  height: 50px;
 }
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ----- NAV SHOP INTERACTION ----- */
 
 nav .shop {
   font-family: "freehouse", Georgia, serif;
@@ -110,6 +117,12 @@ nav .shop {
   border-radius: 5px;
   padding: 10px 15px;
   font-weight: bold;
+  text-decoration: none;
+}
+
+nav .shop:hover {
+  background-color: #DBD3CD;
+  color: #261E1A;
 }
 
 .hamburger {
@@ -621,3 +634,4 @@ footer .copyright {
   }
 
 }
+
