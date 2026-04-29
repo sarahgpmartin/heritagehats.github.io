@@ -112,96 +112,16 @@ nav .shop {
   font-weight: bold;
 }
 
-nav img {
-  width: 100px;
-  height: 50px;
-}
-
 .hamburger {
   display: none;
-  width: 30px;
+  width: 50px;
   height: auto;
   cursor: pointer;
 }
 
-/* ----- ----- ----- ----- ----- MOBILE ----- ----- ----- ----- ----- */
-
-@media (max-width: 600px) {
-
-/* NAVIGATION */
-
-  nav {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 10px;
-  }
-
-  .nav-left {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-/* HERO IMAGE */
-
-  .hero-image {
-    min-height: 350px;
-  }
-
-  .hero-text {
-    padding: 25px;
-  }
-
-  .hero-text h1 {
-    font-size: 18px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
-  }
-
-/* ABOUT SECTION */
-
-  #about {
-    padding: 25px;
-    text-align: left;
-  }
-
-  #about p {
-    width: 100%;
-  }
-
-  #about h1 {
-    text-align: left;
-  }
-
-  .learn-more {
-    font-size: 15px;
-    gap: 5px;
-  }
-
-  .line1,
-  .line2 {
-    width: 50%;
-  }
-
-/* FOOTER SECTION */
-
-  footer .footer-info {
-    display: flex;
-    gap: 50px;
-    padding: 25px 0px;
-    flex-wrap: wrap;
-  }
-
+.logo {
+  width: 100px;
+  height: auto;
 }
 
 /* ----- ----- ----- ----- -----ABOUT SECTION ----- ----- ----- ----- ----- */
@@ -295,7 +215,6 @@ nav img {
   padding: 50px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 25px;
 }
 
@@ -303,7 +222,6 @@ nav img {
   font-family: "freehouse", Georgia , serif;
   font-size: 25px;
   font-weight: bold;
-  font-style: normal;
   color: #261E1A;
   text-align: center;
   margin: 0px;
@@ -324,9 +242,22 @@ nav img {
   padding: 25px;
   border: none;
   font-family: "Georgia", serif;
-  font-weight: normal;
   font-size: 15px;
   cursor: pointer;
+}
+
+/* ----- HAT GRID ----- */
+
+.hat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+}
+
+.hat-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ----- HAT GRID ----- */
@@ -526,4 +457,167 @@ footer .footer-info {
 
 footer .copyright {
     text-align: center;
+}
+
+/* ----- ----- ----- ----- ----- MOBILE ----- ----- ----- ----- ----- */
+
+@media (max-width: 600px) {
+
+/* HEADER */
+
+  header {
+    margin-top: 0px;
+  }
+
+/* NAVIGATION */
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background-color: transparent;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+.logo {
+  content: url("images/HeritageHats_Logo1.png");
+}
+
+
+/* HERO IMAGE */
+
+  .hero-image {
+    min-height: 350px;
+  }
+
+  .hero-text {
+    padding: 25px;
+  }
+
+  .hero-text h1 {
+    font-size: 18px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+/* ABOUT SECTION */
+
+  #about {
+    padding: 25px;
+    text-align: left;
+  }
+
+  #about p {
+    width: 100%;
+  }
+
+  #about h1 {
+    text-align: left;
+  }
+
+  .learn-more {
+    font-size: 15px;
+    gap: 5px;
+  }
+
+  .line1,
+  .line2 {
+    width: 50%;
+  }
+
+/* HAT SECTION */
+
+#hats {
+  padding: 50px;
+}
+
+.hat-filters {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hat-filters button {
+  padding: 10px;
+  font-size: 12px;
+}
+
+.hat-grid {
+  display: flex;
+  gap: 25px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  margin: 0;
+  padding: 0;
+
+  scroll-padding-left: 50px;
+}
+
+.hat-grid img {
+  flex: 0 0 80%;
+  height: auto;
+  width: 100%;
+
+  scroll-snap-align: center;
+  display: block;
+}
+
+/* VIDEO SECTION */
+
+  #video {
+    padding: 50px;
+  }
+
+  #video .video-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  /* each video card */
+  #video .video-grid a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #video .video-grid img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+  }
+
+  #video .video-grid p {
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+/* FOOTER SECTION */
+
+  footer .footer-info {
+    display: flex;
+    gap: 50px;
+    padding: 25px 0px;
+    flex-wrap: wrap;
+  }
+
 }
